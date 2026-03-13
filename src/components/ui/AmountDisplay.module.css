@@ -1,0 +1,5 @@
+/* src/components/ui/AmountDisplay.module.css */
+.amount { display: inline-flex; align-items: baseline; gap: 2px; }
+.symbol { font-size: 0.55em; opacity: 0.7; font-family: var(--font-body); font-weight: 500; }
+.positive { color: var(--success); }
+.negative { color: var(--danger); }

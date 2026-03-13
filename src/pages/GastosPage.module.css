@@ -1,0 +1,20 @@
+/* src/pages/GastosPage.module.css */
+.page { padding: 0.5rem 0; }
+.header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
+.filterBtn { padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 500; border: 1px solid var(--border-md); color: var(--text-muted); transition: all 0.2s; }
+.filterBtn.filterActive { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.itemWrapper { position: relative; display: flex; align-items: center; gap: 6px; }
+.itemWrapper > :first-child { flex: 1; }
+.deleteBtn { flex-shrink: 0; opacity: 0.5; transition: opacity 0.2s; }
+.itemWrapper:hover .deleteBtn { opacity: 1; }
+.empty { text-align: center; padding: 3rem 1rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.row { display: flex; gap: 0.75rem; }
+.terceroRow { display: flex; gap: 6px; }
+.checkRow { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); cursor: pointer; }
+.checkRow input { width: 16px; height: 16px; accent-color: var(--accent); }
+.etqRow { display: flex; flex-wrap: wrap; gap: 6px; }
+.etqBtn { padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 500; border: 1px solid var(--border-md); color: var(--text-muted); transition: all 0.2s; }
+.etqBtn.etqActive { background: rgba(255,171,0,0.1); }

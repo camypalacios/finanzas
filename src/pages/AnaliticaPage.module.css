@@ -1,0 +1,21 @@
+/* src/pages/AnaliticaPage.module.css */
+.page { padding: 0.5rem 0; display: flex; flex-direction: column; gap: 1rem; }
+.pageTitle { font-family: var(--font-title); font-size: 1.4rem; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+.chartCard { }
+.chartTitle { font-family: var(--font-title); font-size: 0.85rem; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; }
+.legend { display: flex; justify-content: center; gap: 1.5rem; margin-top: -0.5rem; }
+.legendItem { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); }
+.legendItem span:first-child { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.catList { display: flex; flex-direction: column; gap: 4px; margin-top: 0.5rem; }
+.catItem { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; }
+.catDot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.catNombre { flex: 1; color: var(--text-secondary); }
+.catMonto { color: var(--text-primary); font-family: var(--font-title); font-size: 0.9rem; }
+.terceroRow { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.terceroRow:last-child { border-bottom: none; }
+.terceroNombre { font-weight: 600; font-size: 0.9rem; }
+.fijoRow { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); }
+.fijoRow:last-child { border-bottom: none; }
+.fijoInfo { display: flex; align-items: center; gap: 8px; flex: 1; }
+.fijoDesc { font-size: 0.875rem; }
+.etqBadge { font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; font-weight: 500; }

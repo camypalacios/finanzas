@@ -1,0 +1,8 @@
+/* src/pages/IngresosPage.module.css */
+.page { padding: 0.5rem 0; }
+.header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem; }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.item { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; }
+.item:hover { background: var(--bg-hover); }
+.info { flex: 1; min-width: 0; }
+.desc { font-size: 0.9rem; font-weight: 500; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

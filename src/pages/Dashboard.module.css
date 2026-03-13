@@ -1,0 +1,38 @@
+/* src/pages/Dashboard.module.css */
+.page { padding: 0.5rem 0; }
+.currencyToggle {
+  display: flex; align-items: center; gap: 6px; justify-content: center;
+  margin-bottom: 1rem;
+}
+.currBtn {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-md);
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+.currBtn.currActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+.rateHint { font-size: 0.7rem; color: var(--text-muted); margin-left: 4px; }
+.skeletons { padding: 1rem 0; }
+.balanceCard { text-align: center; margin-bottom: 1rem; }
+.balanceLabel { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+.balanceRow { display: flex; justify-content: space-around; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.subLabel { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 2px; }
+.section { margin-bottom: 1.5rem; }
+.sectionTitle { font-family: var(--font-title); font-size: 0.85rem; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
+.metaCard { margin-bottom: 0.75rem; }
+.metaHeader { display: flex; justify-content: space-between; align-items: center; }
+.metaName { font-weight: 600; font-size: 0.9rem; }
+.metaFooter { display: flex; justify-content: space-between; }
+.tarjetaGroup { margin-bottom: 1rem; }
+.tarjetaHeader { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+.tarjetaDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.tarjetaNombre { flex: 1; font-size: 0.85rem; font-weight: 600; }
+.gastosList { display: flex; flex-direction: column; gap: 2px; }
+.gastoRow { display: flex; align-items: center; gap: 8px; padding: 6px; border-radius: var(--radius-sm); }
+.gastoRow:hover { background: var(--bg-hover); }
+.gastoDot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.gastoDesc { flex: 1; font-size: 0.82rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cuotaBadge { font-size: 0.65rem; background: rgba(64,196,255,0.15); color: var(--info); padding: 1px 5px; border-radius: 8px; flex-shrink: 0; }

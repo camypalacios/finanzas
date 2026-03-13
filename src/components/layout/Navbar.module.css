@@ -1,0 +1,137 @@
+/* src/components/layout/Navbar.module.css */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  gap: 1rem;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.pageTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.hamburger {
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 6px;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 60;
+}
+
+/* Drawer */
+.drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: min(320px, 85vw);
+  height: 100dvh;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-md);
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+.drawerOpen { right: 0; }
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.closeBtn {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.closeBtn:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+.navList { list-style: none; padding: 0.75rem 0; flex: 1; }
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  text-align: left;
+}
+.navItem:hover { background: var(--bg-hover); color: var(--text-primary); }
+.navItem.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+.navItem.active .navIcon { color: var(--accent); }
+.navIcon { font-size: 1.1rem; width: 20px; text-align: center; flex-shrink: 0; }
+
+.logoutBtn {
+  padding: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: left;
+  transition: color 0.2s;
+  border-top: 1px solid var(--border);
+}
+.logoutBtn:hover { color: var(--danger); }
+
+/* Bottom nav */
+.bottomNav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--bottom-h);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.bottomItem {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px;
+  padding: 8px 4px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.bottomItem.bottomActive { color: var(--accent); }
+.bottomIcon { font-size: 1.25rem; }
+.bottomLabel { font-size: 0.65rem; font-weight: 500; }

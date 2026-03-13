@@ -1,0 +1,10 @@
+/* src/components/layout/Layout.module.css */
+.root { min-height: 100dvh; }
+.main {
+  padding-top: var(--nav-h);
+  padding-bottom: calc(var(--bottom-h) + 1rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}

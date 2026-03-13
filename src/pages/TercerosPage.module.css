@@ -1,0 +1,9 @@
+/* src/pages/TercerosPage.module.css */
+.page { padding: 0.5rem 0; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.title { font-family: var(--font-title); font-size: 1.4rem; letter-spacing: 0.06em; }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.item { display: flex; align-items: center; gap: 1rem; padding: 0.875rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+.avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-dim); border: 1px solid var(--accent); color: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+.info { flex: 1; }
+.nombre { font-weight: 600; }

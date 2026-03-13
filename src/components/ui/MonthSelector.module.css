@@ -1,0 +1,25 @@
+/* src/components/ui/MonthSelector.module.css */
+.container {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+.arrow {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-md);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  transition: all 0.2s;
+}
+.arrow:hover { background: var(--bg-hover); border-color: var(--accent); color: var(--accent); }
+.label {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+  min-width: 180px;
+  text-align: center;
+  color: var(--text-primary);
+}
