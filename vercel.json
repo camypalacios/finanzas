@@ -1,13 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/api/auth/change-password", "destination": "/api/auth/login?action=change-password" },
-    { "source": "/api/gastos/:id",            "destination": "/api/gastos?id=:id" },
-    { "source": "/api/ingresos/:id",          "destination": "/api/ingresos?id=:id" },
-    { "source": "/api/metas/:id/aportar",     "destination": "/api/metas?id=:id&action=aportar" },
-    { "source": "/api/metas/:id",             "destination": "/api/metas?id=:id" },
-    { "source": "/api/categorias/:id",        "destination": "/api/categorias?id=:id" },
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",

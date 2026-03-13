@@ -42,7 +42,7 @@ export default function LoginPage() {
     }
     setLoadingChange(true);
     try {
-      await api.post('/auth/login?action=change-password', { codigo, nuevaPassword: nuevaPass });
+      await api.post('/auth/change-password', { codigo, nuevaPassword: nuevaPass });
       toast.success('Contraseña actualizada correctamente');
       setShowChange(false);
       setCodigo('');
