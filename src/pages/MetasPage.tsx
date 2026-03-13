@@ -50,6 +50,13 @@ export default function MetasPage() {
     setModalAporte(false); cargar();
   };
 
+  const handleEliminar = async (meta: MetaAhorro) => {
+    if (!window.confirm(`¿Eliminar la meta "${meta.nombre}"?`)) return;
+    await api.delete(`/metas/${meta.id}`);
+    toast.success('Meta eliminada');
+    cargar();
+  };
+
   const today = new Date();
 
   return (
@@ -82,7 +89,10 @@ export default function MetasPage() {
                     <h3 className={styles.metaNombre}>{meta.nombre}</h3>
                     {meta.descripcion && <p className="text-muted" style={{ fontSize:'0.78rem' }}>{meta.descripcion}</p>}
                   </div>
-                  <button className="btn btn-ghost btn-icon" onClick={() => openEdit(meta)}>✎</button>
+                  <div style={{ display:'flex', gap:'4px' }}>
+                    <button className="btn btn-ghost btn-icon" onClick={() => openEdit(meta)}>✎</button>
+                    <button className="btn btn-ghost btn-icon" style={{ color:'var(--danger)' }} onClick={() => handleEliminar(meta)}>🗑</button>
+                  </div>
                 </div>
                 <div className={styles.metaMontos}>
                   <span className="amount amount-md" style={{ color: meta.color_hex }}>{meta.moneda} {fmt(meta.monto_actual)}</span>
